@@ -137,3 +137,20 @@ let score=JSON.parse(localStorage.getItem('score'));
                 }
                
             }
+            //document.querySelector('.js-rock-button')
+              //  .addEventListener('click',playGame('rock'));
+
+            document.querySelector('.js-rock-button')
+                .addEventListener('click',()=>{
+                    playGame('rock');
+                });
+
+            document.querySelector('.js-paper-button')
+                .addEventListener('click',()=>{
+                    playGame('paper');
+                })
+
+            document.querySelector('.js-scissors-button')
+                .addEventListener('click',()=>{
+                    playGame('scissors');
+                })
