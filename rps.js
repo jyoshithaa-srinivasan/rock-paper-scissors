@@ -41,6 +41,8 @@ let score=JSON.parse(localStorage.getItem('score'));
                 return computerMove;
 
             }
+
+
             function playGame(playerMove){
                 const computerMove=pickComputerMove();
                 let result='';
@@ -154,3 +156,19 @@ let score=JSON.parse(localStorage.getItem('score'));
                 .addEventListener('click',()=>{
                     playGame('scissors');
                 })
+
+            //everytime we press a key in the keyboard ---> addEventListener will save the event 
+            //object in the parameter
+            //this event object contains the key that we pressed
+
+            document.body.addEventListener('keydown',(event)=>{
+                if(event.key==='r'){
+                    playGame('rock');
+                }
+                else if(event.key==='p'){
+                    playGame('paper');
+                }
+                else if(event.key==='s'){
+                    playGame('scissors');
+                }
+            });
